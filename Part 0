@@ -1,1 +1,12 @@
-
+1. User writes note in text field
+2. User clicks Save button
+3. Browser sends POST request to /exampleapp/new_note with note data
+4. Server receives POST, saves note to database
+5. Server responds with 302 redirect to /exampleapp/notes
+6. Browser receives redirect, sends GET request to /exampleapp/notes
+7. Server sends back the HTML page
+8. Browser renders page, which triggers more requests:
+   - GET /main.css (gets styles)
+   - GET /main.js (gets JavaScript)
+   - GET /data.json (gets note data)
+9. Browser displays updated notes list
